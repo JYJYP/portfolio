@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>JYP's Portfolio</title>
+
+    <style>
+
+
+        /* 전체 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        /* 바로가기 메뉴 */
+
+            /* 작은 메뉴 */
+
+                #small-menu {
+                    width: 100%;
+                    height: 70px;
+                    text-align: center;
+                }
+
+                #nav-small {
+                    position: fixed;
+                    display: inline-block;
+                    height: 35px;
+                    top: 40px;
+                    left: 42%;
+                    z-index: 900;
+                    margin: 0 auto;
+                }
+
+                #nav-small .navs {
+                    position: relative;
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background: rgba(255,255,255,1);
+                    border: 2px solid #000000;
+                    border-radius: 50%;
+                    margin: 10px;
+                    z-index: 100;
+                    box-shadow: 1px 3px 20px 5px #FCDFFF;
+                    cursor: pointer;
+                }
+
+                #nav-small .navs:hover {
+                    background:#000000;
+                    
+                }
+
+        /* 큰메뉴 */
+            #nav {
+                position: fixed;
+                top: auto;
+                bottom: 70px;
+                left: auto;
+                right: 50px;
+                width: 80px;
+                z-index: 10;
+                /* top: 410px;
+                left: 1310px; */
+            }
+
+            #nav .button {
+                height: 70px;
+                width: 70px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+        /* 첫 페이지 */
+
+        #cover {
+            background: radial-gradient(50% 50% at 50% 50%, #F0D0FF 0%, #E7EFFF 34.9%, #FBFBF7 77.08%, #FFFFFF 100%);
+            width: auto;
+            height: auto;
+            display:flex; 
+            justify-content:center; 
+            align-items:center;
+            position: relative;
+            z-index: 0;
+        }
+
+        #title {
+            position: absolute;
+            /* text-align: center;
+            top: 50%; */
+            max-width:100%; max-height:100%;
+            z-index: 2;
+        }
+
+        #back {
+            /* position: relative; */
+            width: 2500px;
+            height: 1080px;
+            z-index: 1;
+            
+        }
+
+        #pic1 {
+            position: absolute;
+            top: 7%;
+            left: 82%;
+        }
+        #pic2 {
+            position: absolute;
+            top: 70%;
+            left: 42%;
+        }
+        #pic3 {
+            position: absolute;
+            top: 13%;
+            left: 20%;
+        }
+        #pic4 {
+            position: absolute;
+            top: 58%;
+            left: 88%;
+        }
+        #pic5 {
+            position: absolute;
+            top:80%;
+            left: 16%;
+        }
+        #pic6 {
+            position: absolute;
+            top: 22%;
+            left: 58%;
+        }
+        #pic7 {
+            position: absolute;
+            top: 48%;
+            left: 7%;
+        }
+        #pic8 {
+            position: absolute;
+            top: 80%;
+            left: 63%;
+        }
+        
+        /* 자기소개 페이지 */
+
+        #introduction {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(300.62deg, #ED7CFF 10.27%, #5FFFEC 82.94%), #FFFFFF;
+            width: auto;
+            height: 1080px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #profile {
+            width: 50%;
+            /* background-color: #5FFFEC; */
+            justify-content: right; 
+            align-items:center;
+            display: grid;
+        }
+
+        .pimage {
+            width: 600px;
+            height: 622px;
+            max-width:100%; 
+            max-height:100%;
+            left: auto;
+            margin-right: 70px;
+        }
+
+        #profile-contents {
+            left: auto;
+            right: 0;
+            width: 50%;
+            /* background-color: #5FFaaa; */
+        }
+
+        #profile, #profile-contents {
+            height: 1080px;
+            float: right;
+            position: absolute;
+        }
+
+        .texts {
+            box-sizing: border-box;
+            font-size: 14px;
+            width: 100%;
+            height: 1080px;
+            /* background: rgba(255,255,255,1); */
+            position: static;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            /* overflow: hidden; */
+        }
+
+        .name {
+            width: 486px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 139px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            font-size: 70px;
+            text-align: left;
+        }
+        
+        .box1, .box2, .box3 {
+            height: 59px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .box1 {
+            width: 138px;
+            top: 264px;
+        }
+        .box2 {
+            width: 118px;
+            top: 691px;
+        }
+        .box3 {
+            width: 217px;
+            top: 456px;
+        }
+
+        .title1, .title2, .title3 {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 24px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .title1 {
+            width: 95px;
+            top: 275px;
+        }
+        .title2 {
+            width: 74px;
+            top: 702px;
+        }
+        .title3 {
+            width: 174px;
+            top: 467px;
+        }
+
+        .birth, .cont1, .cont2, .cont3, .cont4 {
+            left: 24px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .birth {
+            width: 201px;
+            top: 347px;
+        }
+        .cont1 {
+            width: 489px;
+            top: 539px;
+        }
+        .cont2 {
+            width: 531px;
+            top: 582px;
+        }
+        .cont3 {
+            width: 462px;
+            top: 625px;
+        }
+        .cont4 {
+            width: 462px;
+            top: 390px;
+        }
+
+        .texts #contents {
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .skills {
+            width: 600px;
+            height: 400px;
+            top: 70%;
+            position: relative;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .skills > .pic {
+            margin: 10px 5px;
+        }
+
+        /* 디자인 페이지 */
+
+        #design {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #design .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #design .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .dheader > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #design .dcontents {
+            text-align: center;
+            padding-bottom: 204px;
+        }
+
+        #design > .dcontents > .pic {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        #design > .dcontents > .pic:hover {
+            transform: scale(1.25);
+        }
+
+
+        #dtitle {
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #dtitle > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 10px 85px;
+            padding: 7px 27px 11px;
+            display: inline-block;
+        }
+
+        /* 캐릭터 페이지 */
+
+        #character {
+            background-color: white;
+            width: auto;
+            /* height: 1080px; */
+            height: auto;
+        }
+
+        #character .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #character .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .cheader > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #character .ccontents {
+            text-align: center;
+            padding-bottom: 204px;
+        }
+
+        #character > .ccontents > .pic {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        #character > .ccontents > .pic:hover {
+            transform: scale(1.25);
+        }
+
+        #ctitle {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #ctitle > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 10px 85px;
+            padding: 7px 27px 11px;
+            display: inline-block;
+        }
+
+        /* 연락 페이지 */
+
+        #contact {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #contact .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #contact .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .con-header > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        #contact .con-contents {
+            text-align: center;
+        }
+
+        #contact > .con-contents > .pic {
+            margin: 30px 65px;
+        }
+
+        #contact-button {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 131px;
+            
+        }
+
+        #conbutton {
+            cursor:pointer;
+        }
+
+        #contact-button > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 70px 85px;
+            padding: 12px 38px 12px;
+            display: inline-block;
+        }
+
+        /* 카드 페이지 */
+
+        #showcard {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #showcard .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            margin-bottom: 73px;
+            color: #000000;
+        }
+
+        .card-contents {
+            text-align: center;
+            /* display: inline-block; */
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .card {
+            background: white;
+            color: rgba(0,0,0,1);
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            width: 300px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 25px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+            margin: 15px;
+            padding: 44px 48px;
+            text-align: left;
+            position: relative;
+            left: auto;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .card .user-name {
+            margin-bottom: 23px;
+        }
+
+        .card .details {
+            margin-bottom: 18px;
+        }
+
+        #thx {
+            padding-top: 224px;
+            padding-bottom: 250px;
+            text-align: center;
+        }
+
+        /* 설명페이지 */
+
+        .background1, .background2, .background3, .background4, .background5, .background6, .background7, .background8, .background9, .background10 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1000;
+
+            /*숨기기*/
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .window {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .show {
+            opacity: 1;
+            z-index: 1000;
+            transition: all .5s;
+        }
+        .show .explain {
+            transform: translate(-50%, -50%);
+            transition: all .5s;
+        }
+
+        .explain {
+            width: 1200px;
+            height: 752px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* 디자인,캐릭터 설명 페이지 */
+
+        #book, #graph, #post, #cnews, #ram, #owl, #fish, #imogi {
+            margin: 39px 35px 35px 33px;
+        }
+        .e-title {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 106px;
+            left: 746px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 41px;
+            text-align: left;
+            margin-right: 90px;
+        }
+
+        #popcontainer {
+            display: flex;
+            justify-content: center;
+        }
+        .e-body {
+            display: flex;
+            justify-content: center;
+        }
+        .e-pic {
+            text-align: center;
+            align-items: center;
+            position: absolute;
+            margin: 0 auto;
+            
+        }
+
+        .e-close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 36px;
+            left: 1125px;
+            cursor: pointer;
+        }
+
+        .fi, .ai, .ps {
+            position: relative;
+            display: inline-block;
+            top: 596px;
+            left: 905px;
+            margin-right: 12px;
+        }
+
+        .e-title-s {
+            width: 403px;
+            color: rgba(30,30,30,1);
+            position: absolute;
+            top: 328px;
+            left: 741px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 27px;
+            text-align: left;
+        }
+        #menu {
+            color: rgba(0,0,0,1);
+            background-color: rgba(255,255,255,1);
+            position: absolute;
+            top: 605px;
+            left: 736px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 26px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            padding: 9px 30px 12px 28px;
+            text-align: center;
+        }
+        
+        #category {
+            color: rgba(0,0,0,1);
+            background-color: rgba(255,255,255,1);
+            position: absolute;
+            top: 230px;
+            left: 736px;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-size: 30px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            padding: 6px 32px 10px 31px;
+            text-align: center;
+        }
+
+        .e-detail {
+            width: 403px;
+            color: rgba(60,60,60,1);
+            position: absolute;
+            top: 431px;
+            left: 741px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            text-align: left;
+        }
+
+
+
+        /* 입력페이지 */
+        #writing {
+            width: 800px;
+            height: 560px;
+            /* top: -800px; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,1);
+            position: absolute;
+            /* display: block; */
+            /* margin: 0 auto; */
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            /* visibility: collapse; */
+            /* z-index: 3; */
+        }
+
+        #dbtn9 {
+            cursor: pointer;
+        }
+        /* #writing:hover {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        } */
+
+        #w-header {
+            text-align: center;
+        }
+        .close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 30px;
+            left: 730px;
+            cursor:pointer;
+        }
+        #w-title {
+            text-align: center;
+            align-items: center;
+            color: rgba(0,0,0,1);
+            position: relative;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 38px;
+            top: 32px;
+        }
+
+        #w-name, #w-letter, #w-password {
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        #w-name {
+            width: 250px;
+            height: 50px;
+            top: 125px;
+            left: 68px;
+        }
+        #w-letter {
+            width: 656px;
+            height: 250px;
+            top: 201px;
+            left: 66px;
+        }
+        #w-password {
+            width: 375px;
+            height: 50px;
+            top: 125px;
+            left: 348px;
+        }
+
+        .w-button {
+            width: 180px;
+            height: 50px;
+            background: rgba(255,245,194,1);
+            position: absolute;
+            top: 478px;
+            left: 543px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .w-button-letter {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            right: 51px;
+            margin-top: 6px;
+        }
+        .write {
+            color: rgb(8, 8, 8);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            width: 200px;
+            margin-left: 30px;
+            margin-top: 6px;
+            text-align: left;
+            align-items: center;
+            border: none;
+            vertical-align: top;
+         
+        }
+        #letterdetail {
+            margin-top: 18px;
+            width: 600px;
+            height: 200px;
+            padding-top: -80px;
+        }
+
+        /* input#modal[type=checkbox]:checked ~ #writing {
+            visibility: visible;
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+        } */
+
+        /* 메세지카드 */
+        #w-title-m {
+            text-align: center;
+            align-items: center;
+            color: rgba(0,0,0,1);
+            position: relative;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 50px;
+            top: 27px;
+        }
+
+        #w-letter-m{
+            width: 680px;
+            height: 320px;
+            top: 128px;
+            left: 56px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+
+        .w-button-m {
+            width: 140px;
+            height: 50px;
+            position: absolute;
+            top: 477px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .w-button-letter-m {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            right: 48px;
+            margin-top: 5.5px;
+        }
+
+        #edit {
+            background-color: white;
+            left: 429px;
+        }
+        #remove {
+            background-color: #FFADAD;
+            left: 595px;
+        }
+
+        .write-m {
+            color: rgb(14, 14, 14);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            margin-left: 43px;
+            margin-top: 28px;
+        }
+
+        .black_bg{
+            display: none;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0,0, 0.5);
+            top:0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .hidden {
+            display:none;
+            visibility:hidden;
+        }
+
+        /* 미디어쿼리 */
+
+        /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+        @media(min-width: 768px) {
+            .pimage{
+                display: block;
+            }
+            .pimage-s{
+                display: none;
+            }
+            #profile-contents {
+                display: block;
+            }
+            #profileimg {
+                display: none;
+            }
+        }
+        @media(max-width: 767px) {
+            .pimage{
+                display: none;
+            }
+            
+            #profileimg {
+                display: block;
+            }
+            
+        }
+
+        @media all and (max-width:767px) { 
+
+            /* 바로가기 메뉴 */
+        
+            #small-menu {
+                display: none;
+            }
+
+            #nav {
+            position: fixed;
+            top: auto;
+            bottom: 70px;
+            width: 300px;
+            right: 46px;
+            display: flex;
+            text-align: center;
+            z-index: 10;
+            }
+
+            #nav .button {
+            height: 70px;
+            width: 70px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: inline;
+            }
+
+            /* 표지 */
+            #titleimg {
+            width: 320px;
+            height: 100px;
+            z-index: 2;
+            }
+            #pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8 {
+            /* transform: scale(80%); */
+            display: none;
+            }
+
+            /* 자기소개 페이지 */
+
+            #introduction {
+                grid-template-columns: none;
+                height: 1466px;
+                overflow: hidden;
+            }
+            #profile {
+                width: 100%;
+                height: 400px;
+                text-align: center;
+                align-items:center;
+                justify-content: none; 
+                display: inline-block;
+            }
+            .pimage-s {
+                width: 280px;
+                height: 292px;
+                margin-top: 85px;
+                margin-right: auto;
+            }
+
+            #profile-contents {
+                display: none;
+            }
+            
+            .needtocenter {
+                text-align: center;
+                align-items: center;
+            }
+            #profileimg {
+                margin-top: 410px;
+                display: inline;
+                
+            }
+
+
+            /* 디자인 페이지 */
+            
+            #design .title {
+                font-size: 55px;
+            }
+            #design .contents {
+                line-height: 22px;
+                font-size: 17px;
+                margin-top: 0px;
+                margin-left: 65px;
+                margin-right: 65px;
+            }
+            #dtitle > .titles {
+                display: none;
+            }
+            #design > .dcontents {
+                margin-top: 60px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            #design > .dcontents > .pic {
+                width: 150px;
+                height: 150px;
+                /* transform: scale(0.6,0.6); */
+                margin-top: -5px;
+                margin-bottom: -5px;
+                margin-left: -5px;
+                margin-right: -5px;
+                display: inline-block;
+            }
+
+                /* 팝업창 */
+
+                .explain {
+                    width: 384px;
+                    height: 750px;
+                    border-radius: 0px 0px 50px 50px;
+                    top: 44.8%;
+                    /* left: 44.74%; */
+                    left: 50%;
+                    text-align: center;
+                }
+
+                .e-pic {
+                    text-align: center;
+                    align-items: center;
+                    position: absolute;
+                    margin: 0 auto;
+                    top: 103px;
+                }
+
+                .e-title {
+                    top: 53px;
+                    left: 32px;
+                    width: 320px;
+                    font-size: 29px;
+                    text-align: center;
+                    line-height: 120%;
+                    
+                }
+
+                .e-title-s {
+                    top: 481px;
+                    left: 27px;
+                    width: 325px;
+                    font-size: 21px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                .e-close {
+                    width: 21px;
+                    height: 21px;
+                    top: 26px;
+                    left: 335px;
+                }
+
+                .e-detail {
+                    width: 310px;
+                    top: 548px;
+                    left: 33px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                .fi, .ai, .ps {
+                    width: 62px;
+                    height: 62px;
+                    top: 660px;
+                    left: 0px;
+                    margin-right: 12px;
+                }
+
+                #book, #graph, #post, #cnews, #ram, #owl, #fish, #imogi {
+                    width: 316px;
+                    height: 321px;
+                }
+
+            /* 캐릭터 페이지 */
+
+            #character .title {
+                font-size: 55px;
+            }
+            #character .contents {
+                line-height: 22px;
+                font-size: 17px;
+                margin-top: 0px;
+                margin-left: 65px;
+                margin-right: 65px;
+            }
+            #ctitle > .titles {
+                display: none;
+            }
+            
+            #character > .ccontents {
+                margin-top: 60px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            #character > .ccontents > .pic {
+                width: 150px;
+                height: 150px;
+                /* transform: scale(0.6,0.6); */
+                margin-top: -5px;
+                margin-bottom: -5px;
+                margin-left: -5px;
+                margin-right: -5px;
+                display: inline-block;
+            }
+
+            /* 연락 페이지 */
+
+            #contact .title {
+                font-size: 55px;
+            }
+            #contact .contents {
+                font-size: 17px;
+                line-height: 25px;
+                margin-bottom: 35px;
+            }
+            #contact > .con-contents > .pic {
+                width: 140px;
+                height: 140px;
+                margin: 15px 80px;
+            }
+            #contact-button > .titles {
+                width: fit-content;
+                font-weight: 600;
+                font-size: 23px;
+                margin-top: 20px;
+            }
+
+                /* 팝업창 */
+                #writing {
+                    width: 323px;
+                    height: 641px;
+                    left: 197px;
+                }
+
+                .close {
+                    width: 20px;
+                    height: 20px;
+                    left: 270px;
+                }
+
+                #w-title {
+                    font-size: 30px;
+                    top: 58px;
+                }
+
+                #w-name {
+                    width: 256px;
+                    height: 46px;
+                    top: 130px;
+                    left: 31px;
+                }
+                #w-password {
+                    width: 256px;
+                    height: 46px;
+                    top: 195px;
+                    left: 31px;
+                }
+                #w-letter {
+                    top: 260px;
+                    width: 256px;
+                    height: 292px;
+                    left: 31px;
+                    border-radius: 30px;
+                }
+                #letterdetail {
+                    width: 200px;
+                    height: 245px;
+                }
+                .write {
+                    font-size: 20px;
+                    margin-top: 7px;
+                    text-align: center;
+                    margin-left: 26px;
+                }
+                .w-button {
+                    width: 172px;
+                    height: 45px;
+                    top: 574px;
+                    left: 73px;
+                    text-align: center;
+                }
+                .w-button-letter {
+                    font-size: 20px;
+                    margin-top: 8px;
+                    right: 54px;
+                }
+
+            /*카드 페이지*/
+            #showcard .title {
+                font-size: 55px;
+                margin-bottom: 35px;
+            }
+            .card-contents {
+                margin-left: 58px;
+                margin-right: 58px;
+            }
+            .card {
+                font-size: 17px;
+                width: 181px;
+                margin: 11px 0px;
+                padding: 28px 46px;
+            }
+            #thximg {
+                width: 324px;
+                height: 125px;
+            }
+
+                /* 카드 */
+                #writing {
+                    width: 323px;
+                    height: 641px;
+                    left: 197px;
+                }
+                #w-title-m {
+                    font-size: 32px;
+                    top: 56px;
+                }
+                #w-letter-m {
+                    top: 130px;
+                    width: 255px;
+                    height: 411px;
+                    left: 31px;
+                    border-radius: 30px;
+                }
+                .write-m {
+                    font-size: 18px;
+                    margin-left: 37px;
+                }
+                .w-button-m {
+                    width: 117px;
+                    height: 43px;
+                    top: 568px;
+                    left: 34px;
+                }
+                #edit {
+                    left: 31px;
+                }
+                #remove {
+                    left: 169px;
+                }
+                .w-button-letter-m {
+                    font-size: 20px;
+                    right: 41px;
+                    margin-top: 6.5px;
+                }
+
+
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- 바로가기 버튼 -->
+        <div id="nav">
+            <a href="#cover">
+                <img class="button" src="images/toHome.png">
+            </a>
+            <a href="#design">
+                <img class="button" src="images/toGallery.png">
+            </a>
+            <a href="#contact">
+                <img class="button" src="images/toContact.png">
+            </a>
+        </div>
+
+    <!-- 바로가기2 -->
+    <div id="small-menu">
+        <div id="nav-small">
+            <a href="#cover"><div id="o1" class="navs"></div></a>
+            <a href="#introduction"><div id="o2" class="navs"></div></a>
+            <a href="#design"><div id="o3" class="navs"></div></a>
+            <a href="#character"><div id="o4" class="navs"></div></a>
+            <a href="#contact"><div id="o5" class="navs"></div></a>
+            <a href="#showcard"><div id="o6" class="navs"></div></a>
+        </div>
+    </div>
+
+    <!--첫화면-->
+    <section id="cover" >
+        <div id="title">
+            <img id="titleimg" src="images/Portfolio.png">   
+        </div>
+        <div id="back">
+            <img id="pic1" class="pic" src="images/o_small.png">
+            <img id="pic2" class="pic" src="images/o_middle.png">
+            <img id="pic3" class="pic" src="images/o_big.png">
+            <img id="pic4" class="pic" src="images/o_gray.png">
+            <img id="pic5" class="pic" src="images/o_pink.png">
+            <img id="pic6" class="pic" src="images/earth.png">
+            <img id="pic7" class="pic" src="images/candy.png">
+            <img id="pic8" class="pic" src="images/star.png">
+        </div>
+    </section>
+
+    <!--두번째 화면(자기소개)-->
+    <section id="introduction">
+        <div id="profile">
+            <img class="pimage" src="images/profile.png">
+            <img class="pimage-s" src="images/profile-1.png">
+        </div>
+        <div class="needtocenter">
+            <img id="profileimg" src="images/Profileimg.png">
+        </div>
+        <div id="profile-contents">
+            <div class="texts">
+                <span class="name">박정연</span>
+                <div id="boxes">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                </div>
+                <div id="titles">
+                    <span class="title1">Profile</span>
+                    <span class="title2">Skills</span>
+                    <span class="title3">Experiences</span>
+                </div>
+                <div id="contents">
+                    <span class="birth">2000.05.21</span>
+                    <span class="cont1">2021 대한민국 공익광고제 공모전 특별상</span>
+                    <span class="cont2">2021 스파르타코딩클럽 서포터즈 르탄즈 1기</span>
+                    <span class="cont3">2022 제일기획 아이디어 페스티벌 참가</span>
+                    <span class="cont4">숭실대학교 경영학부 재학 중</span>
+                </div>
+                <div class="skills">
+                    <img class="pic" src="images/ps.png">
+                    <img class="pic" src="images/ai.png">
+                    <img class="pic" src="images/pr.png">
+                    <img class="pic" src="images/ae.png">
+                    <img class="pic" src="images/fi.png">
+                    <img class="pic" src="images/html.png">
+                    <img class="pic" src="images/css.png">
+                    <img class="pic" src="images/js.png">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--세번째 화면(디자인)-->
+    <section id="design">
+        <div class="dheader">
+            <div class="title">Design</div>
+            <div class="contents">개인 및 팀프로젝트와 공모전 출품을 위해 제작한 캐릭터 디자인입니다.</div>
+        </div>
+        <div id="dtitle">
+            <div class="titles">App</div>
+            <div class="titles">Infograpic</div>
+            <div class="titles">Poster</div>
+            <div class="titles">News</div>
+        </div>
+        <div class="dcontents">
+            <img class="pic" id="dbtn1" src="images/app_pic.png" onclick="show1()">
+            <img class="pic" id="dbtn2" src="images/info_pic.png" onclick="show2()">
+            <img class="pic" id="dbtn3" src="images/poster_pic.png" onclick="show3()">
+            <img class="pic" id="dbtn4" src="images/news_pic.png" onclick="show4()">
+        </div>
+
+
+        <!-- 팝업창 -->
+
+
+                <!-- 디자인1 -->
+            <div class="background1">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="book" src="images/e-bookit.png" >
+                            </div>
+                            <span class="e-title">BOOK IT</span>
+                            <div id="category">App</div>
+                            <span class="e-title-s">공연 관람 후 기록 어플</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose1" src="images/x.png" onclick="eClose1()">
+                            <img class="fi" src="images/fi.png" >
+                            <span class="e-detail">‘BOOK IT’은 공연 관람 후 티켓을 모아놓는 모음집인 ‘티켓북’에서 아이디어를 얻어, 공연을 관람후기를 기록하여 날짜별로 정리해놓을 수 있는 어플이다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 디자인2 -->
+            <div class="background2">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="graph" src="images/e-info.png" >
+                            </div>
+                            <span class="e-title">국보찾기 공모전</span>
+                            <div id="category">Infograpic</div>
+                            <span class="e-title-s">2022 국립보건연구원 국보를 찾아라! 인포그래픽 부문</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose2" src="images/x.png" onclick="eClose2()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">‘2022 국립보건연구원 국보를 찾아라!’ 공모전에 출품한 인포그래픽 디자인 작품. 국립보건연구원 주요사업 소개를 주제로 잡음.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                       
+            <!-- 디자인3 -->
+            <div class="background3">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="post" src="images/e-poster.png" >
+                            </div>
+                            <span class="e-title">리크루팅 포스터</span>
+                            <div id="category">Poster</div>
+                            <span class="e-title-s">동아리 신입부원 모집 포스터 디자인</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose3" src="images/x.png" onclick="eClose3()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">2022 동아리 정기 신입부원 모집을 위한  포스터 디자인을 팀프로젝트로 진행.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디자인4 -->
+            <div class="background4">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="cnews" src="images/e-news.png" >
+                            </div>
+                            <span class="e-title">리크루팅 카드뉴스</span>
+                            <div id="category">News</div>
+                            <span class="e-title-s">동아리 카드뉴스 표지 디자인</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose4" src="images/x.png" onclick="eClose4()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">2022 동아리 정기 리크루팅에서 카드뉴스 게시물 디자인을 팀프로젝트로 진행.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!--네번째 화면(캐릭터)-->
+    <section id="character">
+        <div class="cheader">
+            <div class="title">Character</div>
+            <div class="contents">팀프로젝트와 공모전 출품을 위해 제작한 캐릭터 디자인입니다.</div>
+        </div>
+        <div id="ctitle">
+            <div class="titles">Character Design</div>
+        </div>
+        <div class="ccontents">
+            <img class="pic" id="dbtn5" src="images/cpic1.png" onclick="show5()">
+            <img class="pic" id="dbtn6" src="images/cpic2.png" onclick="show6()">
+            <img class="pic" id="dbtn7" src="images/cpic3.png" onclick="show7()"> 
+            <img class="pic" id="dbtn8" src="images/cpic4.png" onclick="show8()">
+        </div>
+
+        <!-- 팝업창 -->
+
+        <!-- 캐릭터1 -->
+        <div class="background5">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="ram" src="images/e-ram.png" >
+                        </div>
+                        <span class="e-title">동아리 홍보 캐릭터</br> 디자인</span>
+                        <span class="e-title-s">동아리 마스코트 캐릭터 디자인</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose5" src="images/x.png" onclick="eClose5()">
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">각각 다람쥐 ‘람슈’와 담비 ‘담삐’.
+                            동아리 마스코트 캐릭터를 만들어 인스타그램 툰 업로드 및 카드뉴스 등의 동아리 홍보 컨텐츠에 활용한 팀프로젝트.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터2 -->
+        <div class="background6">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="owl" src="images/e-owl.png" >
+                        </div>
+                        <span class="e-title">캐릭터 디자인 공모전</span>
+                        <span class="e-title-s">에브리타임 캐릭터 디자인 공모전</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose6" src="images/x.png" onclick="eClose6()">
+                        <img class="ps" src="images/ps.png" >
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">‘에브리타임 캐릭터 디자인 공모전’에 출품한 에브리타임 어플 대표 캐릭터 디자인 팀프로젝트 작업물.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터3 -->
+        <div class="background7">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="fish" src="images/e-fish.png" >
+                        </div>
+                        <span class="e-title">캐릭터 디자인 공모전</span>
+                        <span class="e-title-s">2021 한국어촌어항공단 캐릭터 디자인 공모전</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose7" src="images/x.png" onclick="eClose7()">
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">한국어촌어항공단 캐릭터 디자인 공모전에 출품한 작업물.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터4 -->
+        <div class="background8">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="imogi" src="images/e-imogi.png" >
+                        </div>
+                        <span class="e-title">카카오톡 이모티콘</span>
+                        <span class="e-title-s">KOBACO 공익광고제 공모전 특별상 부문 수상작</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose8" src="images/x.png" onclick="eClose8()">
+                        <img class="ps" src="images/ps.png" >
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">2021 대한민국 공익광고제 공모전 특별상 이모티콘 부문 수상하여 카카오톡 이모티콘 증정 이벤트 진행.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <!--다섯번째 화면(컨택트)-->
+    <section id="contact">
+        <div class="con-header">
+            <div class="title">Contact</div>
+            <div class="contents">아이콘을 클릭하면 연락처가 복사됩니다.</div>
+        </div>
+        <div class="con-contents">
+            <img class="pic" id="copybtn1" onclick="copy1()" src="images/kakao.png">
+            <img class="pic" id="copybtn2" onclick="copy2()" src="images/insta.png">
+            <img class="pic" id="copybtn3" onclick="copy3()" src="images/gmail.png">
+        </div>
+        <div id="contact-button">
+            <span class="titles" id="dbtn9" onclick="show9()">반응 남기기</span>
+            <!-- <label for="modal" class="titles" id="conbutton">반응 남기기</label> -->
+            <!-- <div class="black_bg"></div> -->
+        </div>
+
+        <!-- <input type="checkbox" id="modal" class="hidden"> -->
+
+        <!-- 입력페이지 -->
+        <div class="background9">
+            <div class="window">
+                <div id="writing">
+                    <div id="w-header">
+                        <!-- <label for="modal" class="closer">
+                            <img id="close" src="images/x.png" >
+                        </label> -->
+                        <img class="close" id="eClose9" src="images/x.png" onclick="eClose9()">
+                        <span id="w-title">반응 남기기</span>
+                    </div>
+                    <div id="w-body">
+                        <div id="w-name" class="namee">
+                            <input type="text" placeholder="이름" class="write" />
+                        </div>
+                        <div id="w-letter" class="contentss">
+                            <textarea placeholder="반응을 남겨주세요..." class="write" id="letterdetail"></textarea>
+                        </div>
+                        <div id="w-password" class="pw">
+                            <input type="password" placeholder="비밀번호" class="write" />
+                        </div>
+                        <div class="w-button" onclick="saveWriting()">
+                            <span class="w-button-letter">보내기!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </section>
+
+
+    <!-- <img class="pic" id="dbtn1" src="images/app_pic.png" onclick="show1()"> -->
+
+    <!--여섯번째 화면(카드)-->
+    <section id="showcard">
+        <div class="card-header">
+            <div class="title">Board</div>
+        </div>
+        <div class="card-contents">
+            <div class="card" id="dbtn10" onclick="show10()">
+                <div class="user-name">
+                    이름
+                </div>
+                <div class="details">
+                    여기에 남긴 반응이 표시됩니다..
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 메세지카드 -->
+        <div class="background10">
+            <div class="window">
+                <div class="showcardlist">
+                    <div id="writing">
+                        <div id="w-header">
+                            <img class="close" id="eClose10" src="images/x.png" onclick="eClose10()">
+                            <span id="w-title-m">이름</span>
+                        </div>
+                        <div id="w-body">
+                            <div id="w-letter-m">
+                                <span class="write-m" id="letterdetail">댓글 내용이 표시됩니다. </span>
+                            </div>
+                            <div class="w-button-m" id="edit" onclick="editletter()">
+                                    <span class="w-button-letter-m">수정</span>
+                            </div>
+                            <div class="w-button-m" id="remove" onclick="deleteletter()">
+                                <span class="w-button-letter-m">삭제</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="thx">
+            <img id="thximg" src="images/thx.png">
+        </div>
+    </section>
+
+    <script>
+
+
+        //아이콘 클릭 시 주소 복사 
+        function copyToClipboard(val) {
+            const t = document.createElement("textarea");
+            document.body.appendChild(t);
+            t.value = val;
+            t.select();
+            document.execCommand('copy');
+            document.body.removeChild(t);
+        }
+
+        function copy1() {
+            copyToClipboard('stella521');
+            alert("아이디가 클립보드에 복사되었습니다.");
+        }
+        function copy2() {
+            copyToClipboard('@parkjy0521');
+            alert("아이디가 클립보드에 복사되었습니다.");
+        }
+        function copy3() {
+            copyToClipboard('parkjy521@gmail.com');
+            alert("메일 주소가 클립보드에 복사되었습니다.");
+        }
+
+
+        //글 저장하기 함수
+
+        // var arrBoardList = [];
+        var arrBoardList = [];
+        
+        function saveWriting() {
+
+            var writer = document
+            .getElementsByClassName("namee")[0]
+            .querySelector("input").value;
+            var pw = document
+            .getElementsByClassName("pw")[0]
+            .querySelector("input").value;
+            var writing = document
+            .getElementsByClassName("contentss")[0]
+            .querySelector("textarea").value;
+
+
+            // 작성자와 글 내용이 정상적으로 적혀 있는지 확인
+            if (writer.length <= 0 || writing.length <= 0) {
+                alert("등록할 글의 작성자와 내용을 입력해주세요!");
+                return;
+            }
+
+            // 비밀번호는 4자로 입력했는지 확인
+            if (pw.length != 4) {
+                alert("비밀번호는 4자로만 입력해주세요!");
+                return;
+            }
+
+            arrBoardList.push({
+                writer: writer,
+                pw: pw,
+                writing: writing,
+            });
+
+            //POST
+            fetch("http://localhost:3000/posts", {
+                method: "POST", 
+                body: JSON.stringify({
+                    writer: writer,
+                    pw: pw,
+                    writing: writing,
+                }),
+                headers: {
+                    "content-type": "application/json; charset=UTF-8",
+                },
+            })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+        //콘솔에 표시하기
+
+            console.log(arrBoardList);
+
+            displayBoardList();
+
+            alert("글이 정상적으로 등록되었습니다!");
+
+
+            document.querySelector(".background9").className = "background9";
+            
+            //기존 내용 초기화
+            document
+                .getElementsByClassName("namee")[0]
+                .querySelector("input").value = "";
+            document
+                .getElementsByClassName("pw")[0]
+                .querySelector("input").value ="";
+            document
+                .getElementsByClassName("contentss")[0]
+                .querySelector("textarea").value = "";
+            
+        }
+
+        //작성글 보드에 띄우기
+
+        function displayBoardList() {
+            var boxListTag = document.getElementsByClassName("card-contents");
+            var showListTag = document.getElementsByClassName("showcardlist");
+            boxListTag[0].innerHTML = "";
+            showListTag[0].innerHTML = "";
+
+            
+            for (var i = 0; i < arrBoardList.length; i++) {
+            const el = arrBoardList[i];
+
+            boxListTag[0].innerHTML +=
+
+            '<div class="card" id="dbtn10" onclick="show10()">\
+                <div class="user-name">' +
+                    el.writer +
+                '</div>\
+                <div class="details">' +
+                    el.writing +
+                '</div>\
+            </div>';
+
+            }
+
+            for (var i = 0; i < arrBoardList.length; i++) {
+            const el = arrBoardList[i];
+
+            showListTag[0].innerHTML +=
+
+            '<div id="writing">\
+                        <div id="w-header">\
+                            <img class="close" id="eClose10" src="images/x.png" onclick="eClose10()">\
+                            <span id="w-title-m">' +
+                                el.writer +
+                            '</span>\
+                        </div>\
+                        <div id="w-body">\
+                            <div id="w-letter-m">\
+                                <span class="write-m" id="letterdetail">' +
+                                    el.writing +
+                                '</span>\
+                            </div>\
+                            <div class="w-button-m" id="edit" onclick="editletter()">\
+                                <span class="w-button-letter-m">수정</span>\
+                            </div>\
+                            <div class="w-button-m" id="remove" onclick="deleteletter()">\
+                                <span class="w-button-letter-m">삭제</span>\
+                            </div>\
+                        </div>\
+                    </div>';
+
+            }
+        }
+
+        //수정하기
+               
+        function editletter() {
+            eClose10();
+            show9(
+                document.getElementsByClassName("namee")[0].querySelector("input").value = arrBoardList[0].writer,
+                document.getElementsByClassName("pw")[0].querySelector("input").value = arrBoardList[0].pw,
+                document.getElementsByClassName("contentss")[0].querySelector("textarea").value = arrBoardList[0].writing,
+            );
+            const div = document.getElementById('dbtn10');
+                    div.remove();
+                    arrBoardList.pop();
+                    fetch('http://localhost:3000/posts')
+                        .then((response)=>(response.json()))
+                        .then((json)=> 
+                    json.pop())
+            // if (document
+            //     .getElementsByClassName("pw")[0].querySelector("input").value !== arrBoardList[0].pw) { 
+            //         alert("비밀번호가 다릅니다.")
+            // };
+            
+
+        }
+
+        //삭제하기
+        function deleteletter() {
+            var rt = confirm("글을 삭제하시겠습니까?");
+
+            if (rt == true) {
+                var user_password = prompt("비밀번호를 입력해주세요", '');
+                if (user_password != arrBoardList[0].pw ) {
+                    alert('비밀번호가 틀렸습니다.');
+                    var user_password = prompt("비밀번호를 입력해주세요", '');
+                } else {
+                    const div = document.getElementById('dbtn10');
+                    div.remove();
+                    arrBoardList.pop();
+                    alert('정상적으로 글이 삭제되었습니다.')
+                    eClose10();
+                    fetch('http://localhost:3000/posts')
+                        .then((response)=>(response.json()))
+                        .then((json)=> 
+                    json.pop())
+                    console.log(arrBoardList);
+                    //delete arrBoardList[0];
+                }
+            } else {
+                alert('취소되었습니다.')
+            }
+        }
+
+
+        //팝업창 열기
+
+        function show1() {document.querySelector(".background1").className = "background1 show";}
+        function show2() {document.querySelector(".background2").className = "background2 show";}
+        function show3() {document.querySelector(".background3").className = "background3 show";}
+        function show4() {document.querySelector(".background4").className = "background4 show";}
+        function show5() {document.querySelector(".background5").className = "background5 show";}
+        function show6() {document.querySelector(".background6").className = "background6 show";}
+        function show7() {document.querySelector(".background7").className = "background7 show";}
+        function show8() {document.querySelector(".background8").className = "background8 show";}
+        function show9() {document.querySelector(".background9").className = "background9 show";}
+        function show10() {document.querySelector(".background10").className = "background10 show";}
+
+        function eClose1() {document.querySelector(".background1").className = "background1";} 
+        function eClose2() {document.querySelector(".background2").className = "background2";} 
+        function eClose3() {document.querySelector(".background3").className = "background3";} 
+        function eClose4() {document.querySelector(".background4").className = "background4";} 
+        function eClose5() {document.querySelector(".background5").className = "background5";} 
+        function eClose6() {document.querySelector(".background6").className = "background6";} 
+        function eClose7() {document.querySelector(".background7").className = "background7";} 
+        function eClose8() {document.querySelector(".background8").className = "background8";} 
+        function eClose9() {document.querySelector(".background9").className = "background9";}
+        function eClose10() {document.querySelector(".background10").className = "background10";}
+
+        document.querySelector("#dbtn1").addEventListener("click", show1);
+        document.querySelector("#dbtn2").addEventListener("click", show2);
+        document.querySelector("#dbtn3").addEventListener("click", show3);
+        document.querySelector("#dbtn4").addEventListener("click", show4);
+        document.querySelector("#dbtn5").addEventListener("click", show5);
+        document.querySelector("#dbtn6").addEventListener("click", show6);
+        document.querySelector("#dbtn7").addEventListener("click", show7);
+        document.querySelector("#dbtn8").addEventListener("click", show8);
+        document.querySelector("#dbtn9").addEventListener("click", show9);
+        document.querySelector("#dbtn10").addEventListener("click", show10);
+
+        document.querySelector("#eClose1").addEventListener("click", eClose1);
+        document.querySelector("#eClose2").addEventListener("click", eClose2);
+        document.querySelector("#eClose3").addEventListener("click", eClose3);
+        document.querySelector("#eClose4").addEventListener("click", eClose4);
+        document.querySelector("#eClose5").addEventListener("click", eClose5);
+        document.querySelector("#eClose6").addEventListener("click", eClose6);
+        document.querySelector("#eClose7").addEventListener("click", eClose7);
+        document.querySelector("#eClose8").addEventListener("click", eClose8);
+        document.querySelector("#eClose9").addEventListener("click", eClose9);
+        document.querySelector("#eClose10").addEventListener("click", eClose10);
+    </script>
+
+</body>
+</html>
