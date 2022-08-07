@@ -527,7 +527,12 @@
             display: inline-block;
         }
 
-        .pic {
+        #contact-button > .titles:hover {
+            box-shadow: 0px 0px 40px 15px #FCDFFF;
+            transition: 0.2s ease-out;
+        }
+
+        #copybtn1,#copybtn2,#copybtn3 {
             cursor: pointer;
         }
 
