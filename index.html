@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>JYP's Portfolio</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    
+</head>
+<body>
+
+    <!-- 바로가기 버튼 -->
+        <div id="nav">
+            <a href="#cover">
+                <img class="button" src="images/toHome.png">
+            </a>
+            <a href="#design">
+                <img class="button" src="images/toGallery.png">
+            </a>
+            <a href="#contact">
+                <img class="button" src="images/toContact.png">
+            </a>
+        </div>
+
+    <!-- 바로가기2 -->
+    <div id="small-menu">
+        <div id="nav-small">
+            <a href="#cover"><div id="o1" class="navs"></div></a>
+            <a href="#introduction"><div id="o2" class="navs"></div></a>
+            <a href="#design"><div id="o3" class="navs"></div></a>
+            <a href="#character"><div id="o4" class="navs"></div></a>
+            <a href="#contact"><div id="o5" class="navs"></div></a>
+            <a href="#showcard"><div id="o6" class="navs"></div></a>
+        </div>
+    </div>
+
+    <!--첫화면-->
+    <section id="cover" >
+        <div id="title">
+            <img id="titleimg" src="images/Portfolio.png">   
+        </div>
+        <div id="back">
+            <img id="pic1" class="pic" src="images/o_small.png">
+            <img id="pic2" class="pic" src="images/o_middle.png">
+            <img id="pic3" class="pic" src="images/o_big.png">
+            <img id="pic4" class="pic" src="images/o_gray.png">
+            <img id="pic5" class="pic" src="images/o_pink.png">
+            <img id="pic6" class="pic" src="images/earth.png">
+            <img id="pic7" class="pic" src="images/candy.png">
+            <img id="pic8" class="pic" src="images/star.png">
+        </div>
+    </section>
+
+    <!--두번째 화면(자기소개)-->
+    <section id="introduction">
+        <div id="profile">
+            <img class="pimage" src="images/profile.png">
+            <img class="pimage-s" src="images/profile-1.png">
+        </div>
+        <div class="needtocenter">
+            <img id="profileimg" src="images/Profileimg.png">
+        </div>
+        <div id="profile-contents">
+            <div class="texts">
+                <span class="name">박정연</span>
+                <div id="boxes">
+                    <div class="box1"></div>
+                    <div class="box2"></div>
+                    <div class="box3"></div>
+                </div>
+                <div id="titles">
+                    <span class="title1">Profile</span>
+                    <span class="title2">Skills</span>
+                    <span class="title3">Experiences</span>
+                </div>
+                <div id="contents">
+                    <span class="birth">2000.05.21</span>
+                    <span class="cont1">2021 대한민국 공익광고제 공모전 특별상</span>
+                    <span class="cont2">2021 스파르타코딩클럽 서포터즈 르탄즈 1기</span>
+                    <span class="cont3">2022 제일기획 아이디어 페스티벌 참가</span>
+                    <span class="cont4">숭실대학교 경영학부 재학 중</span>
+                </div>
+                <div class="skills">
+                    <img class="pic" src="images/ps.png">
+                    <img class="pic" src="images/ai.png">
+                    <img class="pic" src="images/pr.png">
+                    <img class="pic" src="images/ae.png">
+                    <img class="pic" src="images/fi.png">
+                    <img class="pic" src="images/html.png">
+                    <img class="pic" src="images/css.png">
+                    <img class="pic" src="images/js.png">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!--세번째 화면(디자인)-->
+    <section id="design">
+        <div class="dheader">
+            <div class="title">Design</div>
+            <div class="contents">개인 및 팀프로젝트와 공모전 출품을 위해 제작한 캐릭터 디자인입니다.</div>
+        </div>
+        <div id="dtitle">
+            <div class="titles">App</div>
+            <div class="titles">Infograpic</div>
+            <div class="titles">Poster</div>
+            <div class="titles">News</div>
+        </div>
+        <div class="dcontents">
+            <img class="pic" id="dbtn1" src="images/app_pic.png" onclick="show1()">
+            <img class="pic" id="dbtn2" src="images/info_pic.png" onclick="show2()">
+            <img class="pic" id="dbtn3" src="images/poster_pic.png" onclick="show3()">
+            <img class="pic" id="dbtn4" src="images/news_pic.png" onclick="show4()">
+        </div>
+
+
+        <!-- 팝업창 -->
+
+
+                <!-- 디자인1 -->
+            <div class="background1">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="book" src="images/e-bookit.png" >
+                            </div>
+                            <span class="e-title">BOOK IT</span>
+                            <div id="category">App</div>
+                            <span class="e-title-s">공연 관람 후 기록 어플</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose1" src="images/x.png" onclick="eClose1()">
+                            <img class="fi" src="images/fi.png" >
+                            <span class="e-detail">‘BOOK IT’은 공연 관람 후 티켓을 모아놓는 모음집인 ‘티켓북’에서 아이디어를 얻어, 공연을 관람후기를 기록하여 날짜별로 정리해놓을 수 있는 어플이다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 디자인2 -->
+            <div class="background2">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="graph" src="images/e-info.png" >
+                            </div>
+                            <span class="e-title">국보찾기 공모전</span>
+                            <div id="category">Infograpic</div>
+                            <span class="e-title-s">2022 국립보건연구원 국보를 찾아라! 인포그래픽 부문</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose2" src="images/x.png" onclick="eClose2()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">‘2022 국립보건연구원 국보를 찾아라!’ 공모전에 출품한 인포그래픽 디자인 작품. 국립보건연구원 주요사업 소개를 주제로 잡음.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                       
+            <!-- 디자인3 -->
+            <div class="background3">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="post" src="images/e-poster.png" >
+                            </div>
+                            <span class="e-title">리크루팅 포스터</span>
+                            <div id="category">Poster</div>
+                            <span class="e-title-s">동아리 신입부원 모집 포스터 디자인</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose3" src="images/x.png" onclick="eClose3()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">2022 동아리 정기 신입부원 모집을 위한  포스터 디자인을 팀프로젝트로 진행.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디자인4 -->
+            <div class="background4">
+                <div class="window">
+                    <div class="e-body">
+                        <div class="explain">
+                            <div class="e-pic">
+                                <img id="cnews" src="images/e-news.png" >
+                            </div>
+                            <span class="e-title">리크루팅 카드뉴스</span>
+                            <div id="category">News</div>
+                            <span class="e-title-s">동아리 카드뉴스 표지 디자인</span>
+                            <div id="menu">사용툴</div>
+                            <img class="e-close" id="eClose4" src="images/x.png" onclick="eClose4()">
+                            <img class="fi" src="images/fi.png" >
+                            <img class="ai" src="images/ai.png" >
+                            <span class="e-detail">2022 동아리 정기 리크루팅에서 카드뉴스 게시물 디자인을 팀프로젝트로 진행.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!--네번째 화면(캐릭터)-->
+    <section id="character">
+        <div class="cheader">
+            <div class="title">Character</div>
+            <div class="contents">팀프로젝트와 공모전 출품을 위해 제작한 캐릭터 디자인입니다.</div>
+        </div>
+        <div id="ctitle">
+            <div class="titles">Character Design</div>
+        </div>
+        <div class="ccontents">
+            <img class="pic" id="dbtn5" src="images/cpic1.png" onclick="show5()">
+            <img class="pic" id="dbtn6" src="images/cpic2.png" onclick="show6()">
+            <img class="pic" id="dbtn7" src="images/cpic3.png" onclick="show7()"> 
+            <img class="pic" id="dbtn8" src="images/cpic4.png" onclick="show8()">
+        </div>
+
+        <!-- 팝업창 -->
+
+        <!-- 캐릭터1 -->
+        <div class="background5">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="ram" src="images/e-ram.png" >
+                        </div>
+                        <span class="e-title">동아리 홍보 캐릭터</br> 디자인</span>
+                        <span class="e-title-s">동아리 마스코트 캐릭터 디자인</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose5" src="images/x.png" onclick="eClose5()">
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">각각 다람쥐 ‘람슈’와 담비 ‘담삐’.
+                            동아리 마스코트 캐릭터를 만들어 인스타그램 툰 업로드 및 카드뉴스 등의 동아리 홍보 컨텐츠에 활용한 팀프로젝트.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터2 -->
+        <div class="background6">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="owl" src="images/e-owl.png" >
+                        </div>
+                        <span class="e-title">캐릭터 디자인 공모전</span>
+                        <span class="e-title-s">에브리타임 캐릭터 디자인 공모전</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose6" src="images/x.png" onclick="eClose6()">
+                        <img class="ps" src="images/ps.png" >
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">‘에브리타임 캐릭터 디자인 공모전’에 출품한 에브리타임 어플 대표 캐릭터 디자인 팀프로젝트 작업물.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터3 -->
+        <div class="background7">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="fish" src="images/e-fish.png" >
+                        </div>
+                        <span class="e-title">캐릭터 디자인 공모전</span>
+                        <span class="e-title-s">2021 한국어촌어항공단 캐릭터 디자인 공모전</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose7" src="images/x.png" onclick="eClose7()">
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">한국어촌어항공단 캐릭터 디자인 공모전에 출품한 작업물.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 캐릭터4 -->
+        <div class="background8">
+            <div class="window">
+                <div class="e-body">
+                    <div class="explain">
+                        <div class="e-pic">
+                            <img id="imogi" src="images/e-imogi.png" >
+                        </div>
+                        <span class="e-title">카카오톡 이모티콘</span>
+                        <span class="e-title-s">KOBACO 공익광고제 공모전 특별상 부문 수상작</span>
+                        <div id="menu">사용툴</div>
+                        <img class="e-close" id="eClose8" src="images/x.png" onclick="eClose8()">
+                        <img class="ps" src="images/ps.png" >
+                        <img class="ai" src="images/ai.png" >
+                        <span class="e-detail">2021 대한민국 공익광고제 공모전 특별상 이모티콘 부문 수상하여 카카오톡 이모티콘 증정 이벤트 진행.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+    </section>
+
+    <!--다섯번째 화면(컨택트)-->
+    <section id="contact">
+        <div class="con-header">
+            <div class="title">Contact</div>
+            <div class="contents">아이콘을 클릭하면 연락처가 복사됩니다.</div>
+        </div>
+        <div class="con-contents">
+            <img class="pic" id="copybtn1" onclick="copy1()" src="images/kakao.png">
+            <img class="pic" id="copybtn2" onclick="copy2()" src="images/insta.png">
+            <img class="pic" id="copybtn3" onclick="copy3()" src="images/gmail.png">
+        </div>
+        <div id="contact-button">
+            <span class="titles" id="dbtn9" onclick="show9()">반응 남기기</span>
+            <!-- <label for="modal" class="titles" id="conbutton">반응 남기기</label> -->
+            <!-- <div class="black_bg"></div> -->
+        </div>
+
+        <!-- <input type="checkbox" id="modal" class="hidden"> -->
+
+        <!-- 입력페이지 -->
+        <div class="background9">
+            <div class="window">
+                <div id="writing">
+                    <div id="w-header">
+                        <!-- <label for="modal" class="closer">
+                            <img id="close" src="images/x.png" >
+                        </label> -->
+                        <img class="close" id="eClose9" src="images/x.png" onclick="eClose9()">
+                        <span id="w-title">반응 남기기</span>
+                    </div>
+                    <div id="w-body">
+                        <div id="w-name" class="namee">
+                            <input type="text" placeholder="이름" class="write" />
+                        </div>
+                        <div id="w-letter" class="contentss">
+                            <textarea placeholder="반응을 남겨주세요..." class="write" id="letterdetail"></textarea>
+                        </div>
+                        <div id="w-password" class="pw">
+                            <input type="password" placeholder="비밀번호" class="write" />
+                        </div>
+                        <div class="w-button" onclick="saveWriting()">
+                            <span class="w-button-letter">보내기!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </section>
+
+
+    <!-- <img class="pic" id="dbtn1" src="images/app_pic.png" onclick="show1()"> -->
+
+    <!--여섯번째 화면(카드)-->
+    <section id="showcard">
+        <div class="card-header">
+            <div class="title">Board</div>
+        </div>
+        <div class="card-contents">
+            <div class="card" id="dbtn10" onclick="show10()">
+                <div class="user-name">
+                    이름
+                </div>
+                <div class="details">
+                    여기에 남긴 반응이 표시됩니다..
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 메세지카드 -->
+        <div class="background10">
+            <div class="window">
+                <div class="showcardlist">
+                    <div id="writing">
+                        <div id="w-header">
+                            <img class="close" id="eClose10" src="images/x.png" onclick="eClose10()">
+                            <span id="w-title-m">이름</span>
+                        </div>
+                        <div id="w-body">
+                            <div id="w-letter-m">
+                                <span class="write-m" id="letterdetail">댓글 내용이 표시됩니다. </span>
+                            </div>
+                            <div class="w-button-m" id="edit" onclick="editletter()">
+                                    <span class="w-button-letter-m">수정</span>
+                            </div>
+                            <div class="w-button-m" id="remove" onclick="deleteletter()">
+                                <span class="w-button-letter-m">삭제</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="thx">
+            <img id="thximg" src="images/thx.png">
+        </div>
+    </section>
+
+    
+</body>
+</html>

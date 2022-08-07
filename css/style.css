@@ -1,0 +1,1333 @@
+
+        /* 전체 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+
+        /* 바로가기 메뉴 */
+
+            /* 작은 메뉴 */
+
+                #small-menu {
+                    width: 100%;
+                    height: 70px;
+                    text-align: center;
+                }
+
+                #nav-small {
+                    position: fixed;
+                    display: inline-block;
+                    height: 35px;
+                    top: 40px;
+                    left: 42%;
+                    z-index: 900;
+                    margin: 0 auto;
+                }
+
+                #nav-small .navs {
+                    position: relative;
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background: rgba(255,255,255,1);
+                    border: 2px solid #000000;
+                    border-radius: 50%;
+                    margin: 10px;
+                    z-index: 100;
+                    box-shadow: 1px 3px 20px 5px #FCDFFF;
+                    cursor: pointer;
+                }
+
+                #nav-small .navs:hover {
+                    background:#000000;
+                    
+                }
+
+        /* 큰메뉴 */
+            #nav {
+                position: fixed;
+                top: auto;
+                bottom: 70px;
+                left: auto;
+                right: 50px;
+                width: 80px;
+                z-index: 10;
+                /* top: 410px;
+                left: 1310px; */
+            }
+
+            #nav .button {
+                height: 70px;
+                width: 70px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+        /* 첫 페이지 */
+
+        #cover {
+            background: radial-gradient(50% 50% at 50% 50%, #F0D0FF 0%, #E7EFFF 34.9%, #FBFBF7 77.08%, #FFFFFF 100%);
+            width: auto;
+            height: auto;
+            display:flex; 
+            justify-content:center; 
+            align-items:center;
+            position: relative;
+            z-index: 0;
+        }
+
+        #title {
+            position: absolute;
+            /* text-align: center;
+            top: 50%; */
+            max-width:100%; max-height:100%;
+            z-index: 2;
+        }
+
+        #back {
+            /* position: relative; */
+            width: 2500px;
+            height: 1080px;
+            z-index: 1;
+            
+        }
+
+        #pic1 {
+            position: absolute;
+            top: 7%;
+            left: 82%;
+        }
+        #pic2 {
+            position: absolute;
+            top: 70%;
+            left: 42%;
+        }
+        #pic3 {
+            position: absolute;
+            top: 13%;
+            left: 20%;
+        }
+        #pic4 {
+            position: absolute;
+            top: 58%;
+            left: 88%;
+        }
+        #pic5 {
+            position: absolute;
+            top:80%;
+            left: 16%;
+        }
+        #pic6 {
+            position: absolute;
+            top: 22%;
+            left: 58%;
+        }
+        #pic7 {
+            position: absolute;
+            top: 48%;
+            left: 7%;
+        }
+        #pic8 {
+            position: absolute;
+            top: 80%;
+            left: 63%;
+        }
+        
+        /* 자기소개 페이지 */
+
+        #introduction {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(300.62deg, #ED7CFF 10.27%, #5FFFEC 82.94%), #FFFFFF;
+            width: auto;
+            height: 1080px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #profile {
+            width: 50%;
+            /* background-color: #5FFFEC; */
+            justify-content: right; 
+            align-items:center;
+            display: grid;
+        }
+
+        .pimage {
+            width: 600px;
+            height: 622px;
+            max-width:100%; 
+            max-height:100%;
+            left: auto;
+            margin-right: 70px;
+        }
+
+        #profile-contents {
+            left: auto;
+            right: 0;
+            width: 50%;
+            /* background-color: #5FFaaa; */
+        }
+
+        #profile, #profile-contents {
+            height: 1080px;
+            float: right;
+            position: absolute;
+        }
+
+        .texts {
+            box-sizing: border-box;
+            font-size: 14px;
+            width: 100%;
+            height: 1080px;
+            /* background: rgba(255,255,255,1); */
+            position: static;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            /* overflow: hidden; */
+        }
+
+        .name {
+            width: 486px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 139px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            font-size: 70px;
+            text-align: left;
+        }
+        
+        .box1, .box2, .box3 {
+            height: 59px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .box1 {
+            width: 138px;
+            top: 264px;
+        }
+        .box2 {
+            width: 118px;
+            top: 691px;
+        }
+        .box3 {
+            width: 217px;
+            top: 456px;
+        }
+
+        .title1, .title2, .title3 {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            left: 24px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .title1 {
+            width: 95px;
+            top: 275px;
+        }
+        .title2 {
+            width: 74px;
+            top: 702px;
+        }
+        .title3 {
+            width: 174px;
+            top: 467px;
+        }
+
+        .birth, .cont1, .cont2, .cont3, .cont4 {
+            left: 24px;
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        .birth {
+            width: 201px;
+            top: 347px;
+        }
+        .cont1 {
+            width: 489px;
+            top: 539px;
+        }
+        .cont2 {
+            width: 531px;
+            top: 582px;
+        }
+        .cont3 {
+            width: 462px;
+            top: 625px;
+        }
+        .cont4 {
+            width: 462px;
+            top: 390px;
+        }
+
+        .texts #contents {
+            font-size: 22px;
+            text-align: left;
+        }
+
+        .skills {
+            width: 600px;
+            height: 400px;
+            top: 70%;
+            position: relative;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+
+        .skills > .pic {
+            margin: 10px 5px;
+        }
+
+        /* 디자인 페이지 */
+
+        #design {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #design .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #design .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .dheader > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #design .dcontents {
+            text-align: center;
+            padding-bottom: 204px;
+        }
+
+        #design > .dcontents > .pic {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        #design > .dcontents > .pic:hover {
+            transform: scale(1.25);
+        }
+
+
+        #dtitle {
+            text-align: center;
+            margin-top: 20px;
+
+        }
+
+        #dtitle > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 10px 85px;
+            padding: 7px 27px 11px;
+            display: inline-block;
+        }
+
+        /* 캐릭터 페이지 */
+
+        #character {
+            background-color: white;
+            width: auto;
+            /* height: 1080px; */
+            height: auto;
+        }
+
+        #character .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #character .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .cheader > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        #character .ccontents {
+            text-align: center;
+            padding-bottom: 204px;
+        }
+
+        #character > .ccontents > .pic {
+            margin-left: 12px;
+            margin-right: 12px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.2s linear;
+        }
+
+        #character > .ccontents > .pic:hover {
+            transform: scale(1.25);
+        }
+
+        #ctitle {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #ctitle > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 10px 85px;
+            padding: 7px 27px 11px;
+            display: inline-block;
+        }
+
+        /* 연락 페이지 */
+
+        #contact {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #contact .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            color: #000000;
+        }
+
+        #contact .contents {
+            font-family: 'Noto Sans KR', sans-serif;
+            /* font-style: normal; */
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            
+            text-align: center;
+            align-items: center;
+            color: #000000;
+        }
+
+        .con-header > .contents {
+            
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        #contact .con-contents {
+            text-align: center;
+        }
+
+        #contact > .con-contents > .pic {
+            margin: 30px 65px;
+        }
+
+        #contact-button {
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 131px;
+            
+        }
+
+        #conbutton {
+            cursor:pointer;
+        }
+
+        #contact-button > .titles {
+            background-color: white;
+            width: fit-content;
+            top: 433px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 30px;
+            text-align: center;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            margin: 70px 85px;
+            padding: 12px 38px 12px;
+            display: inline-block;
+        }
+
+        .pic {
+            cursor: pointer;
+        }
+
+        /* 카드 페이지 */
+
+        #showcard {
+            background-color: white;
+            width: auto;
+            height: auto;
+        }
+
+        #showcard .title {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 136px;
+            align-items: center;
+            letter-spacing: -0.02em;
+            padding-top: 190px;
+            margin-bottom: 73px;
+            color: #000000;
+        }
+
+        .card-contents {
+            text-align: center;
+            /* display: inline-block; */
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+
+        .card {
+            background: white;
+            color: rgba(0,0,0,1);
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            width: 300px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 25px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.25);
+            margin: 15px;
+            padding: 44px 48px;
+            text-align: left;
+            position: relative;
+            left: auto;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .card .user-name {
+            margin-bottom: 23px;
+        }
+
+        .card .details {
+            margin-bottom: 18px;
+        }
+
+        #thx {
+            padding-top: 224px;
+            padding-bottom: 250px;
+            text-align: center;
+        }
+
+        /* 설명페이지 */
+
+        .background1, .background2, .background3, .background4, .background5, .background6, .background7, .background8, .background9, .background10 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1000;
+
+            /*숨기기*/
+            z-index: -1;
+            opacity: 0;
+        }
+
+        .window {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .show {
+            opacity: 1;
+            z-index: 1000;
+            transition: all .5s;
+        }
+        .show .explain {
+            transform: translate(-50%, -50%);
+            transition: all .5s;
+        }
+
+        .explain {
+            width: 1200px;
+            height: 752px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* 디자인,캐릭터 설명 페이지 */
+
+        #book, #graph, #post, #cnews, #ram, #owl, #fish, #imogi {
+            margin: 39px 35px 35px 33px;
+        }
+        .e-title {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            top: 106px;
+            left: 746px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 41px;
+            text-align: left;
+            margin-right: 90px;
+        }
+
+        #popcontainer {
+            display: flex;
+            justify-content: center;
+        }
+        .e-body {
+            display: flex;
+            justify-content: center;
+        }
+        .e-pic {
+            text-align: center;
+            align-items: center;
+            position: absolute;
+            margin: 0 auto;
+            
+        }
+
+        .e-close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 36px;
+            left: 1125px;
+            cursor: pointer;
+        }
+
+        .fi, .ai, .ps {
+            position: relative;
+            display: inline-block;
+            top: 596px;
+            left: 905px;
+            margin-right: 12px;
+        }
+
+        .e-title-s {
+            width: 403px;
+            color: rgba(30,30,30,1);
+            position: absolute;
+            top: 328px;
+            left: 741px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 27px;
+            text-align: left;
+        }
+        #menu {
+            color: rgba(0,0,0,1);
+            background-color: rgba(255,255,255,1);
+            position: absolute;
+            top: 605px;
+            left: 736px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 26px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            padding: 9px 30px 12px 28px;
+            text-align: center;
+        }
+        
+        #category {
+            color: rgba(0,0,0,1);
+            background-color: rgba(255,255,255,1);
+            position: absolute;
+            top: 230px;
+            left: 736px;
+            font-family: Open Sans;
+            font-weight: 600;
+            font-size: 30px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            padding: 6px 32px 10px 31px;
+            text-align: center;
+        }
+
+        .e-detail {
+            width: 403px;
+            color: rgba(60,60,60,1);
+            position: absolute;
+            top: 431px;
+            left: 741px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            text-align: left;
+        }
+
+
+
+        /* 입력페이지 */
+        #writing {
+            width: 800px;
+            height: 560px;
+            /* top: -800px; */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,1);
+            position: absolute;
+            /* display: block; */
+            /* margin: 0 auto; */
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            /* visibility: collapse; */
+            /* z-index: 3; */
+        }
+
+        #dbtn9 {
+            cursor: pointer;
+        }
+        /* #writing:hover {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        } */
+
+        #w-header {
+            text-align: center;
+        }
+        .close{
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 30px;
+            left: 730px;
+            cursor:pointer;
+        }
+        #w-title {
+            text-align: center;
+            align-items: center;
+            color: rgba(0,0,0,1);
+            position: relative;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 38px;
+            top: 32px;
+        }
+
+        #w-name, #w-letter, #w-password {
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        #w-name {
+            width: 250px;
+            height: 50px;
+            top: 125px;
+            left: 68px;
+        }
+        #w-letter {
+            width: 656px;
+            height: 250px;
+            top: 201px;
+            left: 66px;
+        }
+        #w-password {
+            width: 375px;
+            height: 50px;
+            top: 125px;
+            left: 348px;
+        }
+
+        .w-button {
+            width: 180px;
+            height: 50px;
+            background: rgba(255,245,194,1);
+            position: absolute;
+            top: 478px;
+            left: 543px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .w-button-letter {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            right: 51px;
+            margin-top: 6px;
+        }
+        .write {
+            color: rgb(8, 8, 8);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            width: 200px;
+            margin-left: 30px;
+            margin-top: 6px;
+            text-align: left;
+            align-items: center;
+            border: none;
+            vertical-align: top;
+         
+        }
+        #letterdetail {
+            margin-top: 18px;
+            width: 600px;
+            height: 200px;
+            padding-top: -80px;
+        }
+
+        /* input#modal[type=checkbox]:checked ~ #writing {
+            visibility: visible;
+            -webkit-transform: scale(1, 1);
+            -ms-transform: scale(1, 1);
+            transform: scale(1, 1);
+        } */
+
+        /* 메세지카드 */
+        #w-title-m {
+            text-align: center;
+            align-items: center;
+            color: rgba(0,0,0,1);
+            position: relative;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 50px;
+            top: 27px;
+        }
+
+        #w-letter-m{
+            width: 680px;
+            height: 320px;
+            top: 128px;
+            left: 56px;
+            background: rgba(255,255,255,1);
+            position: absolute;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+
+        .w-button-m {
+            width: 140px;
+            height: 50px;
+            position: absolute;
+            top: 477px;
+            border: 3px solid rgba(0,0,0,1);
+            border-radius: 50px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .w-button-letter-m {
+            color: rgba(0,0,0,1);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 600;
+            font-size: 25px;
+            right: 48px;
+            margin-top: 5.5px;
+        }
+
+        #edit {
+            background-color: white;
+            left: 429px;
+        }
+        #remove {
+            background-color: #FFADAD;
+            left: 595px;
+        }
+
+        .write-m {
+            color: rgb(14, 14, 14);
+            position: absolute;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            margin-left: 43px;
+            margin-top: 28px;
+        }
+
+        .black_bg{
+            display: none;
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0,0, 0.5);
+            top:0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .hidden {
+            display:none;
+            visibility:hidden;
+        }
+
+        /* 미디어쿼리 */
+
+        /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+        @media(min-width: 768px) {
+            .pimage{
+                display: block;
+            }
+            .pimage-s{
+                display: none;
+            }
+            #profile-contents {
+                display: block;
+            }
+            #profileimg {
+                display: none;
+            }
+        }
+        @media(max-width: 767px) {
+            .pimage{
+                display: none;
+            }
+            
+            #profileimg {
+                display: block;
+            }
+            
+        }
+
+        @media all and (max-width:767px) { 
+
+            /* 바로가기 메뉴 */
+        
+            #small-menu {
+                display: none;
+            }
+
+            #nav {
+            position: fixed;
+            top: auto;
+            bottom: 70px;
+            width: 300px;
+            right: 46px;
+            display: flex;
+            text-align: center;
+            z-index: 10;
+            }
+
+            #nav .button {
+            height: 70px;
+            width: 70px;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: inline;
+            }
+
+            /* 표지 */
+            #titleimg {
+            width: 320px;
+            height: 100px;
+            z-index: 2;
+            }
+            #pic1, #pic2, #pic3, #pic4, #pic5, #pic6, #pic7, #pic8 {
+            /* transform: scale(80%); */
+            display: none;
+            }
+
+            /* 자기소개 페이지 */
+
+            #introduction {
+                grid-template-columns: none;
+                height: 1466px;
+                overflow: hidden;
+            }
+            #profile {
+                width: 100%;
+                height: 400px;
+                text-align: center;
+                align-items:center;
+                justify-content: none; 
+                display: inline-block;
+            }
+            .pimage-s {
+                width: 280px;
+                height: 292px;
+                margin-top: 85px;
+                margin-right: auto;
+            }
+
+            #profile-contents {
+                display: none;
+            }
+            
+            .needtocenter {
+                text-align: center;
+                align-items: center;
+            }
+            #profileimg {
+                margin-top: 410px;
+                display: inline;
+                
+            }
+
+
+            /* 디자인 페이지 */
+            
+            #design .title {
+                font-size: 55px;
+            }
+            #design .contents {
+                line-height: 22px;
+                font-size: 17px;
+                margin-top: 0px;
+                margin-left: 65px;
+                margin-right: 65px;
+            }
+            #dtitle > .titles {
+                display: none;
+            }
+            #design > .dcontents {
+                margin-top: 60px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            #design > .dcontents > .pic {
+                width: 150px;
+                height: 150px;
+                /* transform: scale(0.6,0.6); */
+                margin-top: -5px;
+                margin-bottom: -5px;
+                margin-left: -5px;
+                margin-right: -5px;
+                display: inline-block;
+            }
+
+                /* 팝업창 */
+
+                .explain {
+                    width: 384px;
+                    height: 750px;
+                    border-radius: 0px 0px 50px 50px;
+                    top: 44.8%;
+                    /* left: 44.74%; */
+                    left: 50%;
+                    text-align: center;
+                }
+
+                .e-pic {
+                    text-align: center;
+                    align-items: center;
+                    position: absolute;
+                    margin: 0 auto;
+                    top: 103px;
+                }
+
+                .e-title {
+                    top: 53px;
+                    left: 32px;
+                    width: 320px;
+                    font-size: 29px;
+                    text-align: center;
+                    line-height: 120%;
+                    
+                }
+
+                .e-title-s {
+                    top: 481px;
+                    left: 27px;
+                    width: 325px;
+                    font-size: 21px;
+                    font-weight: 700;
+                    text-align: center;
+                }
+                .e-close {
+                    width: 21px;
+                    height: 21px;
+                    top: 26px;
+                    left: 335px;
+                }
+
+                .e-detail {
+                    width: 310px;
+                    top: 548px;
+                    left: 33px;
+                    font-size: 16px;
+                    text-align: center;
+                }
+
+                .fi, .ai, .ps {
+                    width: 62px;
+                    height: 62px;
+                    top: 660px;
+                    left: 0px;
+                    margin-right: 12px;
+                }
+
+                #book, #graph, #post, #cnews, #ram, #owl, #fish, #imogi {
+                    width: 316px;
+                    height: 321px;
+                }
+
+            /* 캐릭터 페이지 */
+
+            #character .title {
+                font-size: 55px;
+            }
+            #character .contents {
+                line-height: 22px;
+                font-size: 17px;
+                margin-top: 0px;
+                margin-left: 65px;
+                margin-right: 65px;
+            }
+            #ctitle > .titles {
+                display: none;
+            }
+            
+            #character > .ccontents {
+                margin-top: 60px;
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+            #character > .ccontents > .pic {
+                width: 150px;
+                height: 150px;
+                /* transform: scale(0.6,0.6); */
+                margin-top: -5px;
+                margin-bottom: -5px;
+                margin-left: -5px;
+                margin-right: -5px;
+                display: inline-block;
+            }
+
+            /* 연락 페이지 */
+
+            #contact .title {
+                font-size: 55px;
+            }
+            #contact .contents {
+                font-size: 17px;
+                line-height: 25px;
+                margin-bottom: 35px;
+            }
+            #contact > .con-contents > .pic {
+                width: 140px;
+                height: 140px;
+                margin: 15px 80px;
+            }
+            #contact-button > .titles {
+                width: fit-content;
+                font-weight: 600;
+                font-size: 23px;
+                margin-top: 20px;
+            }
+
+                /* 팝업창 */
+                #writing {
+                    width: 323px;
+                    height: 641px;
+                    left: 197px;
+                }
+
+                .close {
+                    width: 20px;
+                    height: 20px;
+                    left: 270px;
+                }
+
+                #w-title {
+                    font-size: 30px;
+                    top: 58px;
+                }
+
+                #w-name {
+                    width: 256px;
+                    height: 46px;
+                    top: 130px;
+                    left: 31px;
+                }
+                #w-password {
+                    width: 256px;
+                    height: 46px;
+                    top: 195px;
+                    left: 31px;
+                }
+                #w-letter {
+                    top: 260px;
+                    width: 256px;
+                    height: 292px;
+                    left: 31px;
+                    border-radius: 30px;
+                }
+                #letterdetail {
+                    width: 200px;
+                    height: 245px;
+                }
+                .write {
+                    font-size: 20px;
+                    margin-top: 7px;
+                    text-align: center;
+                    margin-left: 26px;
+                }
+                .w-button {
+                    width: 172px;
+                    height: 45px;
+                    top: 574px;
+                    left: 73px;
+                    text-align: center;
+                }
+                .w-button-letter {
+                    font-size: 20px;
+                    margin-top: 8px;
+                    right: 54px;
+                }
+
+            /*카드 페이지*/
+            #showcard .title {
+                font-size: 55px;
+                margin-bottom: 35px;
+            }
+            .card-contents {
+                margin-left: 58px;
+                margin-right: 58px;
+            }
+            .card {
+                font-size: 17px;
+                width: 181px;
+                margin: 11px 0px;
+                padding: 28px 46px;
+            }
+            #thximg {
+                width: 324px;
+                height: 125px;
+            }
+
+                /* 카드 */
+                #writing {
+                    width: 323px;
+                    height: 641px;
+                    left: 197px;
+                }
+                #w-title-m {
+                    font-size: 32px;
+                    top: 56px;
+                }
+                #w-letter-m {
+                    top: 130px;
+                    width: 255px;
+                    height: 411px;
+                    left: 31px;
+                    border-radius: 30px;
+                }
+                .write-m {
+                    font-size: 18px;
+                    margin-left: 37px;
+                }
+                .w-button-m {
+                    width: 117px;
+                    height: 43px;
+                    top: 568px;
+                    left: 34px;
+                }
+                #edit {
+                    left: 31px;
+                }
+                #remove {
+                    left: 169px;
+                }
+                .w-button-letter-m {
+                    font-size: 20px;
+                    right: 41px;
+                    margin-top: 6.5px;
+                }
+
+
+        }
